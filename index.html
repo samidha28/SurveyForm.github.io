@@ -1,1 +1,112 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+          *{ 
+  box-sizing:border-box;
+}
+body{
+  background:#5CDB95;
+}
+h1{
+  font-size:45px;
+  box-shadow: 2px 2px 10px 0px rgba(30, 110, 20, 0.9);
+  padding:30px;
+}
+header{
+  text-align:center;
+  font-family:Geneva;
+}
+main{
+  background:#05386B;
+  border-radius:35px;
+  margin:5% 25% 3% 25%;
+  padding:50px;
+  box-shadow:10px 10px 10px 0px rgba(50, 50, 50, 0.85);
+  font-size:19px;
+  color:#D8E0E5;
+}
+.text{
+  width:100%;
+  box-sizing:border-box;
+  padding:10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
+}
+input, textarea{
+ margin:20px;
+}
+input[type=submit], input[type=reset]{
+  border:none;
+  padding:7px 20px;
+  background-color:#5CDB95;
+  width:110px;
+  box-shadow:2px 3px 10px 1px;
+}
+input[type=submit]:hover, input[type=reset]:hover{
+  background-color:#00A572;
+  cursor:pointer;
+}
+@media screen and (max-width:500px){
+  #survey-form,textarea{
+    margin:auto;
+    width:100%;
+  }
+}
+footer{
+  text-align:center;
+  font-family:geneva;
+  font-size:20px;
+}
+      </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">This is a survey form by Foodieee Restaurant.Kindly fill the details below. Honest feedbacks are appreciated.</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" placeholder="Ex: Johanna" required class="text">
+        <label for="email" id="email-label">E-mail:</label>
+        <input type="email" id="email" placeholder="xyz@gmail.com" required class="text">
+        <label for="number" id="number-label">Age:</label>
+        <input type="number" id="number" min="16" max="150" placeholder="Enter your age" required class="text">
+        <label>Gender:</label><br>
+        <input type="radio" id="Female" name="gender" value="female">
+        <label for="Female">Female</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+        <label id="dropdown-label">Nationality:</label>
+        <select id="dropdown" class="text">
+          <option>Indian</option>
+          <option>Non-Indian</option>
+        </select><br><br>
+        <label id="ckeck-label">Select words that fit us best from the following.</label><br>
+        <input type="checkbox" id="unique" value="unique">
+        <label for="unique">Unique</label><br>
+        <input type="checkbox" id="Poor" value="poor-quality">
+        <label for="poor">Poor Quality</label><br>
+        <input type="checkbox" id="money" value="money">
+        <label for="money">Quality for money</label><br>
+        <input type="checkbox" id="unreliable" value="unreliable">
+        <label for="unreliable">Unreliable</label><br>
+        <input type="checkbox" id="best" value="best">
+        <label for="best">Best Quality</label><br>
+        <textarea placeholder="Write additional comments here."></textarea><br>
+           <input type="reset" id="reset" value="Reset">
+      <input type="submit" id="submit" value="Submit">  
+      </form>
+    </main>
+    <footer>
+      <p>Thank you for your valuable time.</p>
+    </footer>
+  </body>
+  
+</html>
